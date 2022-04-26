@@ -4,11 +4,11 @@
   vars:
   gather_facts: False
   vars:
-    keypair: ansible
+    keypair: maven
     instance_type: t2.micro
     security_group:
-    image: "ami-0c6a6b0e75b2b6ce7"
-    region: us-east-2
+    image: "ami-0f9fc25dd2506cf6d"
+    region: us-east-1
     user_access_key: "xxxxxxxxxxxxxxxxxxxx"
     user_secret_key: "xxxxxxxxxxxxxxxxxx"
 
@@ -22,7 +22,7 @@
          wait: true
          region: "{{ region }}"
          assign_public_ip: yes
-         vpc_subnet_id: "subnet-0ae6d148a8430e69e"
+         vpc_subnet_id: "subnet-0b5a55464587680c0"
          aws_access_key: "{{ user_access_key }}"
          aws_secret_key: "{{ user_secret_key }}"
       register: ec2
